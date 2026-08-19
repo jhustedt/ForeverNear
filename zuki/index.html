@@ -137,35 +137,28 @@
   <hr class="rule">
 
   <!--
-    GALLERY — how to add photos and videos:
+    GALLERY — how to add photos and videos (no HTML editing needed):
 
-    1. Drop image/video files into the zuki/media/ folder in this repo.
-    2. Copy one of the blocks below and update the file path + caption.
-    3. Photos: use a <button class="gallery-item" data-lightbox="image" ...>
-       Videos: use a <button class="gallery-item is-video" data-lightbox="video" ...>
-       and give it a poster image so the grid shows a still frame.
+    1. Drop the image/video file into the zuki/media/ folder.
+    2. Add one entry for it in zuki/media/manifest.json, e.g.:
+         { "type": "image", "file": "your-photo.jpg", "caption": "" }
+       or for a video:
+         { "type": "video", "file": "your-video.mp4", "poster": "your-video-poster.jpg", "caption": "" }
+    3. Save. That's it — the tile appears here automatically.
+
+    Full format details are in the comment at the top of
+    ../shared/gallery-render.js and in zuki/media/README.md.
 
     Clicking any tile opens it in the in-page lightbox — it plays/displays
     right in the browser, it does not download.
   -->
-  <div class="gallery">
-
-    <!-- Example photo tile (duplicate this block per photo) -->
-    <button class="gallery-item" data-lightbox="image" data-src="./media/photo-01.jpg" data-caption="">
-      <img src="./media/photo-01.jpg" alt="Zuki" loading="lazy">
-    </button>
-
-    <!-- Example video tile (duplicate this block per video) -->
-    <button class="gallery-item is-video" data-lightbox="video" data-src="./media/video-01.mp4" data-caption="">
-      <img src="./media/video-01-poster.jpg" alt="Video of Zuki" loading="lazy">
-    </button>
-
-  </div>
+  <div class="gallery" id="gallery"></div>
 
 </div>
 
 <footer class="site-footer">forevernear.us/zuki</footer>
 
 <script src="../shared/lightbox.js"></script>
+<script src="../shared/gallery-render.js"></script>
 </body>
 </html>
