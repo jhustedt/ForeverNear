@@ -1,0 +1,114 @@
+/* ForeverNear.us — shared styles
+   Palette: twilight blue ground, warm starlight gold accent.
+   The idea: a star that stays fixed in the sky — always near, even after dark. */
+
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Newsreader:ital,wght@0,400;0,500;1,400&family=Space+Mono:wght@400;700&display=swap');
+
+:root {
+  --bg-deep: #171d33;
+  --bg-panel: #232b4c;
+  --line: rgba(232, 185, 89, 0.16);
+  --ink: #f4f0e6;
+  --ink-soft: #aeb4d4;
+  --gold: #e8b959;
+  --gold-soft: rgba(232, 185, 89, 0.55);
+
+  --display: 'Fraunces', serif;
+  --body: 'Newsreader', serif;
+  --mono: 'Space Mono', monospace;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * { animation-duration: 0.001ms !important; animation-iteration-count: 1 !important; transition-duration: 0.001ms !important; }
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow-x: hidden;
+  background: radial-gradient(ellipse 120% 80% at 50% -10%, #202749 0%, var(--bg-deep) 55%);
+  color: var(--ink);
+  font-family: var(--body);
+  font-size: 18px;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* faint fixed starfield */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  background-image:
+    radial-gradient(1.5px 1.5px at 12% 18%, rgba(244,240,230,0.35), transparent),
+    radial-gradient(1.5px 1.5px at 78% 32%, rgba(244,240,230,0.28), transparent),
+    radial-gradient(1px 1px at 45% 62%, rgba(244,240,230,0.3), transparent),
+    radial-gradient(1.5px 1.5px at 88% 78%, rgba(244,240,230,0.22), transparent),
+    radial-gradient(1px 1px at 25% 85%, rgba(244,240,230,0.25), transparent),
+    radial-gradient(1.5px 1.5px at 60% 10%, rgba(244,240,230,0.2), transparent);
+  background-repeat: no-repeat;
+}
+
+a { color: var(--gold); }
+
+.wrap {
+  width: 100%;
+  max-width: 780px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* the signature: a single steady star, always near the name */
+.star {
+  width: 10px;
+  height: 10px;
+  margin: 0 auto;
+  border-radius: 50%;
+  background: var(--gold);
+  box-shadow: 0 0 12px 3px var(--gold-soft);
+  animation: pulse 3.4s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 0.65; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.25); }
+}
+
+.eyebrow {
+  font-family: var(--mono);
+  font-size: 12px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+}
+
+.rule {
+  height: 1px;
+  background: var(--line);
+  border: none;
+  margin: 48px 0;
+}
+
+/* focus visibility */
+a:focus-visible, button:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 3px;
+}
+
+footer.site-footer {
+  width: 100%;
+  text-align: center;
+  padding: 56px 24px 64px;
+  color: var(--ink-soft);
+  font-family: var(--mono);
+  font-size: 12px;
+  letter-spacing: 0.04em;
+}

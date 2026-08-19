@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ForeverNear</title>
+<meta name="description" content="ForeverNear — a place to keep the ones we love close.">
+<link rel="stylesheet" href="./shared/style.css">
+<style>
+  .home-hero { padding: 96px 0 40px; text-align: center; }
+  .home-hero h1 {
+    font-family: var(--display);
+    font-weight: 500;
+    font-size: clamp(2.2rem, 5vw, 3.2rem);
+    margin: 22px 0 10px;
+    letter-spacing: -0.01em;
+  }
+  .home-hero p { color: var(--ink-soft); max-width: 46ch; margin: 0 auto; }
+
+  .memorial-list { list-style: none; margin: 0 0 64px; padding: 0; display: grid; gap: 14px; }
+  .memorial-list a {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    padding: 16px 22px;
+    background: var(--bg-panel);
+    border: 1px solid var(--line);
+    border-radius: 6px;
+    text-decoration: none;
+    color: var(--ink);
+    transition: border-color 0.2s ease, transform 0.2s ease;
+  }
+  .memorial-list a:hover,
+  .memorial-list a:focus-visible {
+    border-color: var(--gold-soft);
+    transform: translateY(-1px);
+  }
+  .memorial-photo {
+    width: 56px;
+    height: 56px;
+    flex: none;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 1px solid var(--gold-soft);
+  }
+  .memorial-text {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 16px;
+    flex: 1;
+    min-width: 0;
+  }
+  .memorial-list .name {
+    font-family: var(--display);
+    font-size: 1.2rem;
+  }
+  .memorial-list .dates {
+    font-family: var(--mono);
+    font-size: 12px;
+    color: var(--ink-soft);
+    white-space: nowrap;
+  }
+</style>
+</head>
+<body>
+
+<div class="wrap">
+  <div class="home-hero">
+    <div class="star" aria-hidden="true"></div>
+    <h1>ForeverNear</h1>
+    <p>A quiet place to keep the ones we love close, and visit whenever we need to.</p>
+  </div>
+
+  <ul class="memorial-list">
+    <li>
+      <a href="./zuki/">
+        <img class="memorial-photo" src="./zuki/media/cover.jpg" alt="Zuki"
+             onerror="this.onerror=null;this.src='./shared/placeholder-portrait.svg';">
+        <span class="memorial-text">
+          <span class="name">Zuki</span>
+          <span class="dates">Feb 25, 2012 &ndash; Aug 15, 2026</span>
+        </span>
+      </a>
+    </li>
+    <!--
+      To add another memorial:
+      1. Duplicate the /zuki folder, rename it (e.g. /riley/)
+      2. Update the name, dates, dedication text, and media inside it
+      3. Add a new <li> here, same shape as above, pointing at ./riley/
+         and ./riley/media/cover.jpg
+      It will be reachable at forevernear.us/riley — no other setup needed.
+
+      Until a cover.jpg exists in a memorial's media folder, its portrait
+      shows a small placeholder mark instead of a broken image.
+    -->
+  </ul>
+</div>
+
+<footer class="site-footer">forevernear.us</footer>
+
+</body>
+</html>
