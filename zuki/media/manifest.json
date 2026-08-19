@@ -1,9 +1,9 @@
 [
-  { "type": "image", "file": "photo-01.jpg", "caption": "" },
+  { "type": "image", "file": "photo-01.JPG", "caption": "" },
   { "type": "image", "file": "photo-02.jpg", "caption": "" },
   { "type": "image", "file": "photo-03.jpg", "caption": "" },
-  { "type": "image", "file": "photo-04.jpg", "caption": "" },
-  { "type": "image", "file": "photo-05.jpg", "caption": "" },
+  { "type": "image", "file": "photo-04.JPG", "caption": "" },
+  { "type": "image", "file": "photo-05.JPG", "caption": "" },
   { "type": "image", "file": "photo-06.jpeg", "caption": "" },
   { "type": "image", "file": "photo-07.jpg", "caption": "" },
   { "type": "image", "file": "photo-08.jpeg", "caption": "" },
