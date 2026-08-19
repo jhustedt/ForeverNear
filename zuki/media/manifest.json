@@ -16,5 +16,11 @@
   { "type": "image", "file": "photo-15.jpg", "caption": "" },
   { "type": "image", "file": "photo-16.jpg", "caption": "" },
   { "type": "image", "file": "photo-17.jpg", "caption": "" },
-  { "type": "image", "file": "photo-18.jpg", "caption": "" }
+  { "type": "image", "file": "photo-18.jpg", "caption": "" },
+  { "type": "image", "file": "photo-19.jpeg", "caption": "" },
+  { "type": "image", "file": "photo-20.jpeg", "caption": "" },
+  { "type": "image", "file": "photo-21.jpeg", "caption": "" },
+  { "type": "image", "file": "photo-22.jpeg", "caption": "" },
+  { "type": "image", "file": "photo-23.jpeg", "caption": "" },
+  { "type": "image", "file": "photo-24.jpeg", "caption": "" }
 ]
