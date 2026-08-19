@@ -1,1 +1,20 @@
-[]
+[
+  { "type": "image", "file": "photo-01.jpg", "caption": "" },
+  { "type": "image", "file": "photo-02.jpg", "caption": "" },
+  { "type": "image", "file": "photo-03.jpg", "caption": "" },
+  { "type": "image", "file": "photo-04.jpg", "caption": "" },
+  { "type": "image", "file": "photo-05.jpg", "caption": "" },
+  { "type": "image", "file": "photo-06.jpeg", "caption": "" },
+  { "type": "image", "file": "photo-07.jpg", "caption": "" },
+  { "type": "image", "file": "photo-08.jpeg", "caption": "" },
+  { "type": "image", "file": "photo-09.jpg", "caption": "" },
+  { "type": "image", "file": "photo-10.jpg", "caption": "" },
+  { "type": "image", "file": "photo-11.jpg", "caption": "" },
+  { "type": "image", "file": "photo-12.jpg", "caption": "" },
+  { "type": "image", "file": "photo-13.jpeg", "caption": "" },
+  { "type": "image", "file": "photo-14.jpg", "caption": "" },
+  { "type": "image", "file": "photo-15.jpg", "caption": "" },
+  { "type": "image", "file": "photo-16.jpg", "caption": "" },
+  { "type": "image", "file": "photo-17.jpg", "caption": "" },
+  { "type": "image", "file": "photo-18.jpg", "caption": "" }
+]
