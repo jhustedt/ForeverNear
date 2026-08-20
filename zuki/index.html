@@ -55,7 +55,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 36px;
-    align-items: center;
+    align-items: start;
     margin: 48px 0;
   }
   .intro-photo {
@@ -67,18 +67,21 @@
   }
   .dedication {
     font-family: var(--body);
-    font-size: 1.15rem;
-    font-style: italic;
+    font-size: 1.08rem;
     color: var(--ink);
   }
-  .dedication .placeholder-note {
-    display: block;
-    font-family: var(--mono);
-    font-style: normal;
-    font-size: 11px;
-    letter-spacing: 0.05em;
-    color: var(--gold-soft);
-    margin-top: 14px;
+  .dedication p {
+    margin: 0 0 18px;
+  }
+  .dedication p:last-child {
+    margin-bottom: 0;
+  }
+  .dedication blockquote {
+    margin: 26px 0;
+    padding-left: 20px;
+    border-left: 2px solid var(--gold-soft);
+    font-style: italic;
+    color: var(--ink);
   }
 
   @media (max-width: 640px) {
@@ -119,18 +122,21 @@
     Cover photo: add zuki/media/cover.jpg (same file used as her portrait
     on the home page) and it will appear here automatically. Until then a
     plain placeholder is shown instead of a broken image.
-
-    Dedication text below is a placeholder — replace the paragraph inside
-    <p class="dedication"> with the real words whenever you're ready.
-    You can delete the <span class="placeholder-note"> line once it's real.
   -->
   <div class="intro">
     <img class="intro-photo" src="./media/cover.jpg" alt="Zuki"
          onerror="this.onerror=null;this.src='./cover-placeholder.svg';">
-    <p class="dedication">
-      Here is where Zuki's dedication will go — a few lines about who she was,
-      what she loved, and what she meant. Replace this paragraph whenever you're ready.
-    </p>
+    <div class="dedication">
+      <p>The first time we met our Princess she had a pink daisy on her harness and a single folded ear, her face already white with almost 8 tender years. She entranced with a delicate beauty and demeanor in which she quietly avoided the intense attention and noise of the adoption event. Instead she spent two hours hanging out with us in a quiet corner of the store. It was instantly obvious that we belonged together.</p>
+
+      <p>How do you summarize a life filled to the brim with love? Maybe in the way she would sit just out of reach on the couch and then LOUDLY demand pets. Maybe in the way she loved to watch us from a corner for hours when you didn't know she was even there. Maybe in the tippy taps of her small paws when she got excited, or the long naps she would take in the most uncomfortable positions, or in the way she knew just how to manipulate her brother.</p>
+
+      <p>We cannot adequately share with you the million small ways she made our lives better, but we do think of the quote from the legendary Ursula Le Guin:</p>
+
+      <blockquote>&ldquo;Love doesn&rsquo;t just sit there, like a stone, it has to be made, like bread; remade all the time, made new.&rdquo;</blockquote>
+
+      <p>Our love for you has not solidified in your passing, just been folded over once more. We love you Sweet Pea.</p>
+    </div>
   </div>
 
   <hr class="rule">
