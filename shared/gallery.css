@@ -94,7 +94,7 @@
 .lb-caption {
   font-family: var(--mono);
   font-size: 13px;
-  color: var(--ink-soft);
+  color: rgba(255, 255, 255, 0.65);
   text-align: center;
   margin: 0;
 }
@@ -105,7 +105,7 @@
   right: 28px;
   background: none;
   border: none;
-  color: var(--ink);
+  color: rgba(255, 255, 255, 0.85);
   font-size: 36px;
   line-height: 1;
   cursor: pointer;
@@ -113,3 +113,37 @@
 }
 
 .lb-close:hover { color: var(--gold); }
+
+.lb-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.06);
+  border: none;
+  color: rgba(255, 255, 255, 0.85);
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  font-size: 18px;
+  line-height: 1;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.lb-nav:hover,
+.lb-nav:focus-visible {
+  background: rgba(255, 255, 255, 0.14);
+  color: var(--gold);
+}
+
+.lb-prev { left: 20px; }
+.lb-next { right: 20px; }
+
+@media (max-width: 640px) {
+  .lb-nav { width: 40px; height: 40px; font-size: 15px; }
+  .lb-prev { left: 8px; }
+  .lb-next { right: 8px; }
+}
